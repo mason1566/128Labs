@@ -1,0 +1,11 @@
+body {
+    /* Setting up so footer defaults to bottom of page */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer {
+    margin-top: auto; /* pushes footer to bottom of page */
+}

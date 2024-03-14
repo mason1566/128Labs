@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="includes/css/lab02.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-secondary border-bottom border-body">
+      <div class="container-fluid mx-2 text-light">
+        <a class="navbar-brand ms-3 me-5" href="#">Mason Johnson Hotel</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> 
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="lab01.html">Lab 1</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Lab 2</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="lab03.html">Lab 3</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="lab04.html">Lab 4</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="lab05.html">Lab 5</a>
+                </li>
+            </ul>
+        </div>
+      
+      </div>
+  </nav>
+
+
+  <!-- content -->
+  <div class="container-fluid container-md justify-content-center">
+    <div class="row">
+
+        <!-- statistics section -->
+        <form class="container-fluid py-4 mt-5 border rounded shadow col-sm-5 col-9" style="background-color: white;" onsubmit="return false">
+            <h2>3 Prices for 3 Rooms?</h2>
+            <div class="d-flex flex-wrap flex-md-nowrap">
+                <p class="my-0 text-nowrap">Enter 3 numbers:</p>
+                <div class="d-flex">
+                    <input type="text" class="inputBox form-control" id="input1">
+                    <input type="text" class="inputBox form-control" id="input2">
+                    <input type="text" class="inputBox form-control" id="input3">
+                </div>
+            </div>
+            <p class="mt-3 overflow-x-auto">Middle: <span id="middle" class="ms-2" style="color: green"></span></p>
+            <p class="overflow-x-auto">Mean: <span id="mean" class="ms-2" style="color: green"></span></p>
+            <button type="submit" class="bg-success text-white btn" id="statsButton">Calculate</button>
+        </form>
+
+        <!-- hotel booking section -->
+        <form class="container-fluid py-4 mt-5 border rounded shadow col-sm-5 col-9" style="background-color: white;" onsubmit="return false">
+            <h2>Display How Full the Hotel is</h2>
+            <input type="text" class="inputBox form-control" id="hotel-booking">
+            <p class="mx-2">The hotel is:</p>
+            <div id="booking-alert" class="mx-2"></div>
+            <button class="bg-success text-white btn mx-2" id="bookingButton">Calculate</button>
+        </form>
+
+        <!-- iteration section -->
+        <form class="container-fluid py-4 mt-5 mb-sm-5 border rounded shadow col-sm-5 col-9" style="background-color: white;" onsubmit="return false">
+            <h2>Iteration</h2>
+            <input type="text" class="inputBox form-control" id="iteration-input">
+            <div id="iteration-text" class="mx-2 overflow-x-auto" style="color: blue;"></div> <!-- overflow-x-auto is useful -->
+            <button class="bg-success text-white btn mx-2 mt-2" id="iterationButton">Calculate</button>
+        </form>
+
+        <!-- race section -->
+        <form class="container-fluid py-4 mt-5 mb-5 border rounded shadow col-sm-5 col-9" style="background-color: white;" onsubmit="return false">
+            <h2>Who gets there the fastest?</h2>
+
+            <div class="d-flex flex-row mb-2">
+                <p class="my-0 me-2 text-nowrap fw-bold">Alexa's Speed:</p>
+                <input type="text" class="inputBox form-control" id="alexa-input">
+            </div>
+            <div class="d-flex flex-row mb-3">
+                <p class="my-0 me-2 text-nowrap fw-bold">Siri's Speed:</p>
+                <input type="text" class="inputBox form-control" id="siri-input">
+            </div>
+            <p class="mx-2 overflow-x-auto">Alexa's speed is: <span id="alexa-speed" style="color: peru; font-weight: bold;">??</span></p> 
+            <p class="mx-2 overflow-x-auto">Siri's speed is: <span id="siri-speed" style="color: royalblue; font-weight: bold;">??</span></p> 
+            <div class="" id="winner"></div>
+            <button class="bg-success text-white btn mx-2 mt-2" id="whosFasterButton">Who's Faster?</button>
+        </form>
+        
+    </div>
+  </div>
+
+
+  <footer class="container-fluid d-flex mx-auto text-center justify-content-center align-items-center bg-primary pt-0">
+      <p class="my-2 fw-bold text-light">MASON JOHNSON 2024</p>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="includes/js/lab02.js"></script>
+</body>
+</html>

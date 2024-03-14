@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.inputBox {
+    padding: 0 10px 0 10px;
+    margin-left: 5px;
+    max-width: 100px;
+}
+
+footer {
+    margin-top: auto;
+}
