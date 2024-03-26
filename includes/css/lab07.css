@@ -16,3 +16,49 @@ footer {
     margin-top: auto;
 }
 
+.panel {
+    background-color: rgb(168, 245, 219) !important;
+    border-radius: 12px !important;
+    box-shadow: 2px 2px 3px black;
+    margin-bottom: 20px;
+}
+
+#nameForm {
+    /* min-height: 100%; */
+}
+
+#nameForm > input {
+    border-radius: 6px;
+    padding: 5px;
+    padding-left: 10px;
+    border: 0;
+    box-shadow: 3px 3px 0px black;
+}
+
+#nameForm > input:focus {
+    outline: 0;
+}
+
+.quizButton {
+    margin-left: 10px !important;
+    border-radius: 10px !important;
+    padding: 3px 18px 3px 18px !important;
+    border: 0 !important;
+    box-shadow: 3px 3px 0px black !important;
+    background-color: rgb(255, 252, 247) !important;
+    font-weight: bold !important;
+    font-size: large !important;
+    transition: background-color .5s !important;
+    transition: outline 1s !important;
+    transition: outline-offset .25s !important;
+}
+
+.quizButton:hover {
+    background-color: rgb(240, 238, 234) !important;
+    outline: black solid 3px !important;
+    outline-offset: -3px !important;
+}
+
+.form-check-label {
+    font-size: small;
+}
