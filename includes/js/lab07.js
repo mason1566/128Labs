@@ -18,6 +18,45 @@ var resultsTime = $('#resultsTime');
 var quizGreeting = $('#quizGreeting');
 
 
+/* Modal Stuff */
+const myModal = new bootstrap.Modal(document.getElementById('modal'));
+
+function setModalHTML(html) {
+    $('#modalContent').html(html);
+}
+
+// html for the different modals
+let nameErrorModal = `<div class="modal-body">
+                            <h3 class="text-center py-3">Please enter a name.</h3> 
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>`;
+
+let questionsErrorModal = `<div class="modal-body">
+                                <h3 class="text-center py-3">Please provide an answer for: Question 5</h3> 
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>`;
+
+let resultsModal;                   
+
+// helper function to set results modal html to users score
+const getResultsModal = () => {
+    let perfectScore = (score == 5) ? `<h5>Thats a PERFECT SCORE!</h5>` : "";
+    resultsModal = `<div class="modal-body">
+                            <h4 style="text-shadow: 3px 3px 0 rgb(0, 0, 0); color: rgb(250 255 60); font-weight: bolder;">You Scored ${score}/5!</h4>
+                            <h5 class="ms-5" style="text-shadow: 2px 2px 0 white;">With a time of ${elapsedTimeInSeconds}. Impressive!</h5>
+                            ${perfectScore}
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>`;    
+    return resultsModal;   
+}
+
+
 /* EVENT HANDLERS */
 $(document).ready(function() {
     $('#nameForm').submit((e) => {
@@ -61,7 +100,9 @@ function startQuizPressed() {
         username = $('#nameField').val();
         startQuiz();
     }
-    else alert("Name must not be blank.");
+    else {
+        myModal.show();
+    }
 }
 
 function startQuiz() {
@@ -77,7 +118,8 @@ function endQuizPressed() {
     let question5Checked = $('input[name="Question5"]:checked').length > 0;
         
     if (!question5Checked) {
-        alert("Please select at least one option for Question 5.");
+        setModalHTML(questionsErrorModal);
+        myModal.show();
         return;
     }
 
@@ -91,19 +133,6 @@ function endQuiz() {
     showResultsPanel();
 }
 
-function startQuizCheck() {
-    const validName = checkNameInput();
-    if (validName) startQuiz();
-    else alertUser(greetingPanel, "Invalid Name");
-}
-
-function alertUser(panel, message) {
-    let panelMessageElement;
-
-    if (panel == greetingPanel) console.log(`${message} in Greeting Panel`);
-    else if (panel == quizPanel) console.log(`${message} in Quiz Panel`);
-    else if (panel == resultsPanel) console.log(`${message} in Results Panel`);
-}
 
 function calculateResults() {
     let form = document.forms['quiz'];
@@ -166,10 +195,14 @@ function showResultsPanel() {
     resultsScore.text(`You scored ${score}/5!`)
     resultsTime.text(`With a time of ${elapsedTimeInSeconds} seconds. Impressive!`)
 
-    if (score == 5) alert("Your score: " + score + `/5\nWith a time of ${elapsedTimeInSeconds}\nThats a Perfect Score!`); // didn't have enough time to implement proper modals :(
-    else alert("Your score: " + score + `/5\nWith a time of ${elapsedTimeInSeconds}`);
+    setModalHTML(getResultsModal());
+    myModal.show();
 }
 
 
+
+
+
 quizPanel.hide();
-resultsPanel.hide()
+resultsPanel.hide();
+setModalHTML(nameErrorModal);
