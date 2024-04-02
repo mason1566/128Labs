@@ -62,37 +62,38 @@
             <div class="card-header">
                 <p class="card-title">Book Your Stay!</p>
             </div>
-            <div class="card-body">
+            <form class="card-body" id="bookRoomForm" name="bookRoom">
                 <div class="row mx-auto text-center justify-content-center">
-                    <p class="col-auto">Arrival Date: <input type="text" id="arrivalPicker"></p>
-                    <p class="col-auto">Departure Date: <input type="text" id="departurePicker"></p>
+                    <p class="col-auto">Arrival Date: <input type="text" id="arrivalPicker" required></p>
+                    <p class="col-auto">Departure Date: <input type="text" id="departurePicker" required></p>
                 </div>
                 <div class="row mx-auto text-center justify-content-center">
-                    <div class="btn-group col-6" role="group">
+                    <div class="btn-group col-auto" role="group">
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
                         <label for="btnradio1" class="btn btn-outline-primary">Standard</label>
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" checked>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
                         <label for="btnradio2" class="btn btn-outline-primary">Double</label>
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" checked>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
                         <label for="btnradio3" class="btn btn-outline-primary">Penthouse</label>
                     </div>
                 </div>
                 <div class="row mx-auto text-center justify-content-center mt-3">
-                    <button class="btn btn-primary col-3">Book Room</button>
+                    <button type="submit" class="btn btn-primary col-3">Book Room</button>
                 </div>
             </div>
         </div>
 
         <!-- Results Card -->
-        <div class="card col-auto col-md-9 mx-auto mt-5">
+        <div class="card col-auto col-md-6 mx-auto my-3" id="results">
             <div class="card-header">
                 <p class="card-title">Your Room</p>
             </div>
             <div class="card-body">
                 <div class="row mx-auto text-center justify-content-center">
-                    <p>Arrival Date: <span id="arrivalDate"></span></p>
-                    <p>Departure Date: <span id="departureDate"></span></p>
-                    <p>Stay Length: <span id="stayLength"></span></p>
+                    <p>Your Room Type: <span id="roomType" class="fw-bold"></span></p>
+                    <p>Arrival Date: <span id="arrivalDate" class="fw-bold"></span></p>
+                    <p>Departure Date: <span id="departureDate" class="fw-bold"></span></p>
+                    <p>Stay Length: <span id="stayLength" class="fw-bold"></span></p>
             </div>
         </div>
     </main>
