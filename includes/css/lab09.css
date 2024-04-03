@@ -1,0 +1,42 @@
+/* FONTS */
+@font-face {
+    font-family: 'Franklin Gothic';
+    src: url(../fonts/FRADMCN.ttf);
+}
+
+@font-face {
+    font-family: 'Cloister Black';
+    src: url(../fonts/CloisterBlackBT-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Eastman';
+    src: url(../fonts/Eastman-Medium.ttf);
+}
+
+
+/* PAGE SETUP */
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100%;
+}
+
+footer {
+    /* margin-top: auto; */
+     /* pushes footer to bottom of page */
+}
+
+#hotelTitle {
+    font-family: 'Cloister Black' !important;
+    font-size: 3rem;
+}
+
+#greetingContainer {
+    min-height: ;
+    
+}

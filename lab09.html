@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="includes/css/lab09.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-secondary border-bottom border-body mb-2">
+        <div class="container-fluid mx-2 text-light">
+        <a class="navbar-brand ms-3 me-5" href="#" id="hotelTitle">Mason Johnson Hotel</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> 
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lab01.html">Lab 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lab02.html">Lab 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lab03.html">Lab 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lab04.html">Lab 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lab05.html">Lab 5</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lab06.html">Lab 6</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lab07.html">Lab 7</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lab08.html">Lab 8</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Lab 9</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Greeting & Weather Section -->
+    <section class="container" id="greetingContainer">
+        <div class="row justify-content-center">
+            <div class="col-7 text-center">
+                Hello
+            </div>
+            <div class="col-5 text-center" id="">
+                <!-- weather icon svg | from google fonts  -->
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-760v-160h80v160h-80Zm266 110-56-56 113-114 56 57-113 113Zm54 210v-80h160v80H760Zm3 299L650-254l56-56 114 112-57 57ZM254-650 141-763l57-57 112 114-56 56Zm-14 450h180q25 0 42.5-17.5T480-260q0-25-17-42.5T421-320h-51l-20-48q-14-33-44-52.5T240-440q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T40-320q0-83 58.5-141.5T240-520q60 0 109.5 32.5T423-400q58 0 97.5 43T560-254q-2 57-42.5 95.5T420-120H240Zm320-134q-5-20-10-39t-10-39q45-19 72.5-59t27.5-89q0-66-47-113t-113-47q-60 0-105 39t-53 99q-20-5-41-9t-41-9q14-88 82.5-144T480-720q100 0 170 70t70 170q0 77-44 138.5T560-254Zm-79-226Z"/></svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room booking section -->
+    <main class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-5 text-center">
+                Hello
+            </div>
+            <div class="col-7 text-center" id="">
+                <!-- Booking Card -->
+                <div class="card col-auto col-md-9 mx-auto">
+                    <div class="card-header">
+                        <p class="card-title">Book Your Stay!</p>
+                    </div>
+                    <form class="card-body" id="bookRoomForm" name="bookRoom">
+                        <div class="row mx-auto text-center justify-content-center">
+                            <p class="col-auto">Arrival Date: <input type="text" id="arrivalPicker" required readonly></p>
+                            <p class="col-auto">Departure Date: <input type="text" id="departurePicker" required readonly></p>
+                        </div>
+                        <div class="row mx-auto text-center justify-content-center">
+                            <div class="btn-group col-auto" role="group">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                <label for="btnradio1" class="btn btn-outline-primary">Standard</label>
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                <label for="btnradio2" class="btn btn-outline-primary">Double</label>
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                <label for="btnradio3" class="btn btn-outline-primary">Penthouse</label>
+                            </div>
+                        </div>
+                        <div class="row mx-auto text-center justify-content-center mt-3">
+                            <button type="submit" class="btn btn-primary col-3">Book Room</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Amenities section -->
+    <section>
+
+    </section>
+
+    <footer class="container-fluid d-flex mx-auto text-center justify-content-center align-items-center bg-primary pt-0 mt-5">
+        <p class="my-2 fw-bold text-light">MASON JOHNSON 2024</p>
+    </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="includes/js/lab09.js"></script>
+</body>
+</html>
