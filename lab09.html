@@ -59,23 +59,31 @@
     <!-- Greeting & Weather Section -->
     <section class="container" id="greetingContainer">
         <div class="row justify-content-center">
+
+            <!-- image container -->
             <div class="col-7 text-center">
-                Hello
+                <div class="col-10 mx-auto my-5">
+                    <img src="includes/images/oceanResort.jpg" class="img-fluid" id="greetingImg">
+                </div>
             </div>
-            <div class="col-5 text-center" id="">
+
+            <!-- weather -->
+            <div class="col-5 d-flex text-center justify-content-center">
                 <!-- weather icon svg | from google fonts  -->
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-760v-160h80v160h-80Zm266 110-56-56 113-114 56 57-113 113Zm54 210v-80h160v80H760Zm3 299L650-254l56-56 114 112-57 57ZM254-650 141-763l57-57 112 114-56 56Zm-14 450h180q25 0 42.5-17.5T480-260q0-25-17-42.5T421-320h-51l-20-48q-14-33-44-52.5T240-440q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T40-320q0-83 58.5-141.5T240-520q60 0 109.5 32.5T423-400q58 0 97.5 43T560-254q-2 57-42.5 95.5T420-120H240Zm320-134q-5-20-10-39t-10-39q45-19 72.5-59t27.5-89q0-66-47-113t-113-47q-60 0-105 39t-53 99q-20-5-41-9t-41-9q14-88 82.5-144T480-720q100 0 170 70t70 170q0 77-44 138.5T560-254Zm-79-226Z"/></svg>
+                <div class="my-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-760v-160h80v160h-80Zm266 110-56-56 113-114 56 57-113 113Zm54 210v-80h160v80H760Zm3 299L650-254l56-56 114 112-57 57ZM254-650 141-763l57-57 112 114-56 56Zm-14 450h180q25 0 42.5-17.5T480-260q0-25-17-42.5T421-320h-51l-20-48q-14-33-44-52.5T240-440q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T40-320q0-83 58.5-141.5T240-520q60 0 109.5 32.5T423-400q58 0 97.5 43T560-254q-2 57-42.5 95.5T420-120H240Zm320-134q-5-20-10-39t-10-39q45-19 72.5-59t27.5-89q0-66-47-113t-113-47q-60 0-105 39t-53 99q-20-5-41-9t-41-9q14-88 82.5-144T480-720q100 0 170 70t70 170q0 77-44 138.5T560-254Zm-79-226Z"/></svg>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Room booking section -->
-    <main class="container mt-5">
+    <main class="container mt-5" id="bookingContainer">
         <div class="row justify-content-center">
-            <div class="col-5 text-center">
+            <div class="col-5 text-center my-auto">
                 Hello
             </div>
-            <div class="col-7 text-center" id="">
+            <div class="col-lg-7 text-center my-5" id="bookingCard">
                 <!-- Booking Card -->
                 <div class="card col-auto col-md-9 mx-auto">
                     <div class="card-header">
@@ -106,8 +114,57 @@
     </main>
 
     <!-- Amenities section -->
-    <section>
-
+    <section class="mt-5" id="Amenities">
+        <div class="container-fluid d-flex flex-column justify-content-center align-items-center" id="content">
+            <div class="card mx-4 mt-4" style="max-width: 800px;">
+                <div class="d-flex flex-md-row flex-column">
+                <div class="col-md-6 col-12">
+                    <img src="/includes/images/motelRoom.jpg" class="img-fluid rounded-start" style="object-fit: cover; max-height: 400px;">
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Standard</h5>
+                        <hr>
+                        <p class="card-text">Quaint little room with a view!</p>
+                        <p class="card-text fw-bold fs-5">$35</p>
+                        <button class="btn btn-primary align-self-end" id="Standard">Book Room</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="card mx-4 mt-4" style="max-width: 800px;">
+                <div class="d-flex flex-md-row flex-column">
+                <div class="col-md-6 col-12">
+                    <img src="/includes/images/niceRoom.jpg" class="img-fluid rounded-start" style="object-fit: cover; max-height: 400px;">
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Upgraded</h5>
+                        <hr>
+                        <p class="card-text">Cozy &amp; picturesque</p>
+                        <p class="card-text fw-bold fs-5">$180</p>
+                        <button class="btn btn-primary align-self-end" id="Upgraded">Book Room</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="card mx-4 mt-4" style="max-width: 800px;">
+                <div class="d-flex flex-md-row flex-column">
+                <div class="col-md-6 col-12">
+                    <img src="/includes/images/outsideRoom.jpg" class="img-fluid rounded-start" style="object-fit: cover; max-height: 400px;">
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Ultra</h5>
+                        <hr>
+                        <p class="card-text">Impractical</p>
+                        <p class="card-text fw-bold fs-5">$599.99</p>
+                        <button class="btn btn-primary align-self-end" id="Ultra">Book Room</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer class="container-fluid d-flex mx-auto text-center justify-content-center align-items-center bg-primary pt-0 mt-5">
