@@ -18,7 +18,7 @@ const setDepartureMinDate = (date) => {
     $("#departurePicker").datepicker("option", "minDate", date);
 }
 
-// room submit function. Input already validated
+// room submit function
 $("#bookRoomForm").submit((e) => {
     e.preventDefault();
     
